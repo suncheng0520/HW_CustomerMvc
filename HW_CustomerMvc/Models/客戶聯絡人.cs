@@ -14,6 +14,12 @@ namespace HW_CustomerMvc.Models
     
     public partial class 客戶聯絡人
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public 客戶聯絡人()
+        {
+            this.是否已刪除 = false;
+        }
+    
         public int Id { get; set; }
         public int 客戶Id { get; set; }
         public string 職稱 { get; set; }
@@ -21,6 +27,7 @@ namespace HW_CustomerMvc.Models
         public string Email { get; set; }
         public string 手機 { get; set; }
         public string 電話 { get; set; }
+        public Nullable<bool> 是否已刪除 { get; set; }
     
         public virtual 客戶資料 客戶資料 { get; set; }
     }

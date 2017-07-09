@@ -14,6 +14,12 @@ namespace HW_CustomerMvc.Models
     
     public partial class 客戶銀行資訊
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public 客戶銀行資訊()
+        {
+            this.是否已刪除 = false;
+        }
+    
         public int Id { get; set; }
         public int 客戶Id { get; set; }
         public string 銀行名稱 { get; set; }
@@ -21,6 +27,7 @@ namespace HW_CustomerMvc.Models
         public Nullable<int> 分行代碼 { get; set; }
         public string 帳戶名稱 { get; set; }
         public string 帳戶號碼 { get; set; }
+        public bool 是否已刪除 { get; set; }
     
         public virtual 客戶資料 客戶資料 { get; set; }
     }
