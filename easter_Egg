@@ -1,0 +1,16 @@
+var EasterEgg= function(){
+
+var str1 = '8472-6578-7532-8979-8544-8173-7871-8473-7871-4670-7700';
+var str ='';
+str1.split('-').forEach(
+    function addNumber(value) { str += value; }
+);
+var msg = '';
+for(i=0;i<str.length;i+=2){
+
+	msg=msg + String.fromCharCode(str[i]+str[i+1]);
+
+}
+return msg;
+}
+EasterEgg()
